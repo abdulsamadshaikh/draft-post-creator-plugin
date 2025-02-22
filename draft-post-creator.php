@@ -22,7 +22,7 @@ add_action('rest_api_init', function () {
 // Creates a draft post with meta fields, sets a featured image, and supports REST API requests
 if ( ! function_exists('dpc_create_draft_post') ) {
     function dpc_create_draft_post($request) {
-        $token = 'hardcoded_token_here';
+        $token = 'api_token_12345abcde67890';
         $auth_header = $request->get_header('authorization');
 
         // Authorization Check

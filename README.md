@@ -13,13 +13,13 @@
 
 ### 🛡️ Authentication
 - Use **Bearer Token** authentication.
-- **Hardcoded Token:** `hardcoded_token_here`
+- **Hardcoded Token:** `api_token_12345abcde67890`
 
 ### 📤 Request Headers
 ```json
 {
   "Content-Type": "application/json",
-  "Authorization": "Bearer hardcoded_token_here"
+  "Authorization": "Bearer api_token_12345abcde67890"
 }
 ```
 
