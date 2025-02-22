@@ -48,6 +48,33 @@
 - **400 Bad Request:** Missing required fields or invalid image URL.
 - **500 Internal Server Error:** Post creation or image upload failed.
 
+## 🧪 Testing the API
+
+### ✅ **Using cURL:**
+```bash
+curl -X POST https://your-site.com/wp-json/draft-post-creator/v1/create-post \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer api_token_12345abcde67890" \
+-d '{
+  "title": "Sample Post",
+  "description": "Post content here",
+  "meta_title": "SEO Title",
+  "meta_keywords": "API, WordPress, Post",
+  "meta_description": "SEO meta description",
+  "img_url": "https://images.pexels.com/photos/30819809/pexels-photo-30819809.jpeg"
+}'
+```
+
+### ✅ **Using Postman:**
+1. Set the method to **POST**.
+2. Add the URL:  
+   `https://your-site.com/wp-json/draft-post-creator/v1/create-post`
+3. Add Headers:
+   - `Content-Type: application/json`
+   - `Authorization: Bearer api_token_12345abcde67890`
+4. In **Body** → **raw** → **JSON**, paste the request payload.
+5. Click **Send** and check the response.
+
 ## 💡 Features
 - 📝 Creates a draft post with a title, description, and SEO meta fields.
 - 🖼️ Downloads and sets a featured image from a provided URL.
@@ -60,3 +87,6 @@
   - **Meta Keywords** (`meta_keywords`)
   - **Meta Description** (`meta_description`)
 - The featured image is set using the provided `img_url`.
+
+## 🛡️ Security Tip
+For production use, replace the hardcoded token with dynamic JWT or OAuth authentication for enhanced security.
