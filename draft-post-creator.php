@@ -65,7 +65,7 @@ if ( ! function_exists('dpc_create_draft_post') ) {
             'post_title'   => sanitize_text_field($params['title']),
             'post_content' => wp_kses_post($params['description']),
             'post_status'  => 'draft',
-            'post_type'    => 'post'
+            'post_type'    => 'publish'
         ]);
 
         if (is_wp_error($post_id)) {
